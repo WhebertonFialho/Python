@@ -1,0 +1,1 @@
+Rotina de rolagem de dados para jogos de RPG
