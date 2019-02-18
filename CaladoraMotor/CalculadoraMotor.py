@@ -1,31 +1,27 @@
-#coding: utf-8
-# Wheberton Fialho
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-pi = 3.14159
+PI = 3.14159
 
 def CalculaCilindrada(dm_pistao, dm_curso, cilindros):
-	multiplicacao = pi * (dm_pistao * dm_pistao) * dm_curso
+	raio = dm_pistao / 10
+	altura = dm_curso / 10
+	area = PI * (raio * raio) * altura
 	cilindrada = 0
 
 	#MONOCILINDRO OU MULTICILINDRO
 	if cilindros == 1:
-		cilindradas = (multiplicacao / 1000) / 4
+		cilindradas = area / 4
 	else:
-		resultado = cilindros == 4 and multiplicacao or (multiplicacao / 4) * cilindros
-		cilindradas = round(resultado / 1000, 2)
+		result = cilindros == 4 and area or (area / 4) * cilindros
+		cilindradas = result 
 	
-	return cilindradas
-
-def CalculaTaxaMotor():
-	pass
-
-def CalculaVolumeMotor():
-	pass
+	return round(cilindradas, 2)
 
 if __name__ == '__main__':
-	dm_pistao = input("Digite o Diametro do Pistao(mm): ")
-	dm_curso = input("Curso Virabrequin(mm): ")
+	dm_pistao = float(input("Digite o Diametro do Pistao(mm): "))
+	dm_curso = float(input("Curso Virabrequin(mm): "))
 	cilindros = input("Digite quantos cilindros: ")
 	cilindradas = CalculaCilindrada(dm_pistao, dm_curso, cilindros)
 
-	print "Cilindradas: {0}cc".format(cilindradas)
+	print "Cilindradas do Motor: {0}cc".format(cilindradas)
