@@ -19,7 +19,7 @@ def CalculaCilindrada(dm_pistao, dm_curso, cilindros):
 	return round(cilindradas, 2)
 
 if __name__ == '__main__':
-	dm_pistao = float(input("Digite o Diametro do Pistao(mm): "))
+	dm_pistao = float(input("Digite o Diametro do Pistão(mm): "))
 	dm_curso = float(input("Curso Virabrequin(mm): "))
 	cilindros = input("Digite quantos cilindros: ")
 	cilindradas = CalculaCilindrada(dm_pistao, dm_curso, cilindros)
